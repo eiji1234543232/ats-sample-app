@@ -1,0 +1,27 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/candidate.html b/candidate.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..57901177d5c794a171a38bd010e5c873d4998efd
+--- /dev/null
++++ b/candidate.html
+@@ -0,0 +1,17 @@
++<!doctype html>
++<html lang="ja">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>候補者詳細</title>
++    <link rel="stylesheet" href="styles.css" />
++  </head>
++  <body>
++    <main class="container">
++      <section class="card wide" id="candidateDetail"></section>
++    </main>
++
++    <script src="data.js"></script>
++    <script src="candidate.js"></script>
++  </body>
++</html>
+ 
+EOF
+)
